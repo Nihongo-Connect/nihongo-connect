@@ -1,0 +1,141 @@
+/* Responsive CSS */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .intro-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro .avatar {
+    margin-top: 20px;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-info {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .service-list {
+    justify-content: center;
+  }
+  .Picture_Main {
+    width: 200px;
+    margin-right: 0;
+  }
+  .info {
+    padding-left: 0;
+  }
+
+  .picture-2 {
+    margin-left: 0;
+  }
+  .picture-1 {
+    display: flex;
+    margin-left: 0;
+    display: none;
+  }
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+    order: 3;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer-big {
+    margin-left: 0;
+  }
+  .footer-left {
+    margin-left: 0;
+  }
+  .succes-son {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-follow {
+    margin-left: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  /* Header */
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header .menu {
+    margin-top: 10px;
+  }
+  .header .menu a {
+    margin: 0 10px;
+  }
+
+  /* Intro */
+  .intro {
+    padding: 30px 5%;
+  }
+  .intro .info h1 {
+    font-size: 22px;
+  }
+  .intro .avatar img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Profile */
+  .profile {
+    padding: 30px 5%;
+  }
+  .profile-image img {
+    /* width: 150px; */
+  }
+
+  /* Services */
+  .services {
+    padding: 30px 5%;
+  }
+  .service-box {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Contact */
+  .contact {
+    padding: 30px 5%;
+    padding-bottom: 50px;
+  }
+  .contact form {
+    width: 100%;
+  }
+  .Picture_Main {
+    width: 200px;
+    margin-right: 0;
+  }
+  .info {
+    padding-left: 0;
+  }
+  .picture-1 {
+    display: none;
+  }
+
+  .footer-big_img {
+    display: none;
+  }
+
+  .footer-big {
+    width: auto;
+  }
+  .succes-son {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .level {
+    margin-bottom: 20px;
+  }
+  .books-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
