@@ -9,22 +9,19 @@ navs.forEach((nav) => {
 });
 
 // Kiểm tra nếu đang dùng mobile
-function setEmailLinks() {
-  const gmailLink =
-    "https://mail.google.com/mail/?view=cm&fs=1&to=contact@nihongoconnect.org&su=Xin%20chào&body=Xin%20chào,%20tôi%20quan%20tâm%20đến%20dịch%20vụ...";
+function openEmail() {
   const mailtoLink =
     "mailto:contact@nihongoconnect.org?subject=Xin%20chào&body=Xin%20chào,%20tôi%20quan%20tâm%20đến%20dịch%20vụ...";
+  const gmailWebLink =
+    "https://mail.google.com/mail/?view=cm&fs=1&to=contact@nihongoconnect.org&su=Xin%20chào&body=Xin%20chào,%20tôi%20quan%20tâm%20đến%20dịch%20vụ...";
 
-  // Kiểm tra nếu là mobile (Android/iOS)
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-  document
-    .getElementById("email-link")
-    .setAttribute("href", isMobile ? gmailLink : mailtoLink);
-  document
-    .getElementById("apply-link")
-    .setAttribute("href", isMobile ? gmailLink : mailtoLink);
+  if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+    // Nếu là điện thoại → dùng mailto (mở app Gmail)
+    window.location.href = mailtoLink;
+  } else {
+    // Nếu là PC → mở Gmail web
+    window.open(gmailWebLink, "_blank");
+  }
 }
 
-// Gọi khi load trang
-setEmailLinks();
+
